@@ -8,10 +8,10 @@ The main code files are:
 
 * `Emissions_Cleaning.ipynb`: cleans the emissions data preliminarily before being joined with the other data files
 * `AsthmaUtilization_Cleaning.ipynb`: handles the majority of the data cleaning, wrangling, and preprocessing
-* `Feature selection.ipynb`: explores using PCA and variance thresholding to isolate the final set of 18 fetures
+* `Feature selection.ipynb`: explores relevant features using EDA, PCA and variance thresholding to isolate the final set of 18 fetures
 * `Models.ipynb`: contains the ML models used to predict asthma risk in Allegheny County census tracts
 
-Additional code files were retained to show our work, but are not necessary for the main project:
+Archive consists of additional code files that the team played with while developing the code but are not relevant to the main project:
 
 * `Gridsearch_and_Smote.ipynb`
 * `variable_threshold.ipynb`
@@ -31,4 +31,4 @@ We leveraged common machine learning techniques, including variance thresholding
 
 Our results inform three policy recommendations for Allegheny County: (1) additional funding should be directed into local initiatives via the PA Asthma Control Program; (2) emissions inspections and regulatory enforcement should take place in a proactive, rather than reactive, manner; and (3) a task force should be assembled to focus specifically on racial disparities in asthma exacerbators and to devise solutions to alleviate these inequities. Shifting a part of the asthma management burden onto policymakers will ultimately increase efficiency and mitigate costs associated with untreated or poorly treated asthma.
 
-Limitations include a lack of temporal breadth and granularity of our data, which can be attributed to the limited availability of healthcare data in the public domain. Most importantly, this project spanned only four weeks, whereas typical ML policy endeavors require much more time to ensure all programmatic and technical elements are present and well-validated. Thus, the results presented should be taken with an enormous grain of salt. Future directions are described and aim to address many of these shortcomings. 
+Limitations include a lack of temporal breadth and granularity of our data, which can be attributed to the limited availability of healthcare utilization data in the public domain. Most importantly, this project spanned only four weeks, whereas typical ML policy endeavors require much more time to ensure all programmatic and technical elements are present and well-validated. Thus, the results presented should be taken with an enormous grain of salt. Future directions are described and aim to address many of these shortcomings. 
