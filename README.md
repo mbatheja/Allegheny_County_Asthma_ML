@@ -19,6 +19,8 @@ Archive consists of additional code files that the team played with while develo
 
 Similarly, the `our-data/` folder contains all datasets that were explored and produced in the development of this project. See the report or `AsthmaUtilization_Cleaning.ipynb` to understand the final files that were used.
 
+Bias reports can be found in the folder `Aequitas Bias Reports`
+
 ---
 
 ### Executive Summary
