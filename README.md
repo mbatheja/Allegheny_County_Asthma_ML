@@ -3,8 +3,6 @@
 This repository contains the machine learning pipeline developed for the **Machine Learning Foundations with Python** course at Carnegie Mellon University. This project utilizes environmental, sociodemographic, and healthcare utilization data to classify asthma risk levels in Allegheny County census tracts.
 
 ---
-(c) Contributors: Matteo Secomandi, Mahima Batheja, Anna Ringwood
----
 ## Repository Structure
 
 Based on the project's current architecture, the files are organized as follows:
@@ -91,5 +89,9 @@ Our models consistently identified the following as the most influential drivers
 
 ## Policy Recommendations
 <li> Localized Funding: Direct resources to the PA Asthma Control Program for identified "High Risk" tracts. </li>
+---
+
+(c) Contributors: Matteo Secomandi, Mahima Batheja, Anna Ringwood
+
 <li> Proactive Regulation: Use pollutants like Carbon Monoxide as triggers for proactive emissions inspections. </li>
 <li>Equity Task Force: Specifically address racial disparities highlighted by the positive correlation between the Black/African American population and high diagnosis rates. </li>
