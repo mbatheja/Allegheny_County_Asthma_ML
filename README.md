@@ -3,7 +3,8 @@
 This repository contains the machine learning pipeline developed for the **Machine Learning Foundations with Python** course at Carnegie Mellon University. This project utilizes environmental, sociodemographic, and healthcare utilization data to classify asthma risk levels in Allegheny County census tracts.
 
 ---
-
+(c) Contributors: Matteo Secomandi, Mahima Batheja, Anna Ringwood
+---
 ## Repository Structure
 
 Based on the project's current architecture, the files are organized as follows:
