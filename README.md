@@ -5,9 +5,19 @@ This repository contains the machine learning pipeline developed for the **Machi
 ---
 
 ## Repository Structure
-* **Top-level directory**: Primary Jupyter Notebooks for the ML pipeline.
-* **`our-data/`**: Raw and processed datasets (CSV format).
-* **`Aequitas Bias Reports/`**: Detailed fairness and bias audits.
+
+Based on the project's current architecture, the files are organized as follows:
+
+```text
+├── Aequitas Bias Reports/     # Detailed fairness and bias audits
+├── Archive/                  # Legacy notebooks (variable_threshold, etc.)
+├── our-data/                 # Cleaned and processed CSV datasets
+├── AsthmaUtilization_Cleaning.ipynb
+├── Emissions_Cleaning.ipynb
+├── Feature selection.ipynb
+├── Models.ipynb
+├── README.md
+└── requirements.txt
 
 ### Main Code Files
 1. **`Emissions_Cleaning.ipynb`**: Preliminary cleaning of EPA and local emissions data.
