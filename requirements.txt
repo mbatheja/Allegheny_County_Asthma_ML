@@ -1,0 +1,21 @@
+# Data Wrangling and Analysis
+pandas==2.2.3
+numpy==1.26.4
+
+# Visualization
+matplotlib==3.10.0
+seaborn==0.13.2
+graphviz==0.20.3
+
+# Machine Learning Core
+scikit-learn==1.6.1
+scipy==1.15.1
+
+# Gradient Boosting (New)
+xgboost==3.0.0
+
+# Imbalanced Data Handling (New)
+imbalanced-learn==0.13.0
+
+# Interactive Display
+ipython==8.31.0
