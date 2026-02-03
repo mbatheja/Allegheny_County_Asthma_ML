@@ -17,7 +17,7 @@ Based on the project's current architecture, the files are organized as follows:
 ├── Models.ipynb
 ├── README.md
 └── requirements.txt
-
+```
 ### Main Code Files
 1. **`Emissions_Cleaning.ipynb`**: Preliminary cleaning of EPA and local emissions data.
 2. **`AsthmaUtilization_Cleaning.ipynb`**: Core data wrangling hub, joining utilization and census data.
