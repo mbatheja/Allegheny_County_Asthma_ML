@@ -30,3 +30,55 @@ This project utilized a multi-stage analytical pipeline to move from 130+ raw va
 
 ### 1. Dimensionality Reduction (PCA)
 To handle the high dimensionality of environmental and sociodemographic data, we employed **Principal Component Analysis (PCA)**. This helped us identify the "latent" structures in Allegheny County’s data—such as "Urban Industrial Stress"—without overfitting the model to specific, redundant noise.
+
+
+### 2. Multi-collinearity Mitigation (VIF)
+Public health data is highly collinear (e.g., poverty levels correlating with housing age). We calculated the **Variance Inflation Factor (VIF)** to ensure model stability. We iteratively removed features with high VIF scores to ensure that each feature in the final set provided independent, unique information.
+
+### 3. Missingness & Variance Thresholding
+* **Missingness Filter**: Removed columns where more than **40% of the data was missing or zero**, ensuring a strong signal-to-noise ratio.
+* **Variance Thresholding**: Eliminated "quasi-constant" features that rarely changed across tracts to focus the model on variables that actually drive health disparities.
+
+### 4. Advanced Sampling for Class Imbalance
+Since the "High Risk" class is the minority, we implemented:
+* **SMOTE (Synthetic Minority Over-sampling Technique)**: To teach the model subtle patterns in high-risk areas.
+* **Random Undersampling (RUS)**: To balance the training set, specifically improving **Recall** to ensure no high-risk community is left behind.
+
+---
+
+## Installation and Requirements
+Ensure you have Python 3.9+ installed.
+
+### 1. Clone the repository
+```bash
+git clone [https://github.com/your-username/asthma-allegheny-ml.git](https://github.com/your-username/asthma-allegheny-ml.git)
+cd asthma-allegheny-ml
+```
+###2. Install Dependencies
+```bash
+pip install pandas numpy matplotlib seaborn scikit-learn xgboost imbalanced-learn ipython
+```
+## Code Implementation Logic
+The modeling logic in Models.ipynb follows a rigorous pipeline:
+
+<li> Temporal Cross-Validation: Data is sorted by YearOfContactDate using TimeSeriesSplit (4 folds) to prevent temporal data leakage and mimic real-world predictive deployment. </li>
+
+<li> Preprocessing: Features are scaled using StandardScaler within a ColumnTransformer. </li>
+
+<li> Hyperparameter Tuning: GridSearchCV was used to optimize PR-AUC (Precision-Recall Area Under Curve). For XGBoost, this involved tuning gamma, learning_rate, max_depth, and reg_alpha. </li>
+
+<li> Threshold Optimization: We explored custom classification thresholds (e.g., 0.3 and 0.4) to prioritize Recall over Accuracy, as the public health cost of missing a high-risk tract is significant. </li>
+
+## Feature Importance
+Our models consistently identified the following as the most influential drivers of asthma risk:
+
+<li> NumberED_VisitsAge0to17Per100: The strongest proxy for uncontrolled asthma. </li>
+
+<li>Carbon Monoxide: A primary environmental predictor. </li>
+
+<li> Age0to17PopEst: Highlighting the demographic vulnerability of the pediatric population. </li>
+
+## Policy Recommendations
+<li> Localized Funding: Direct resources to the PA Asthma Control Program for identified "High Risk" tracts. </li>
+<li> Proactive Regulation: Use pollutants like Carbon Monoxide as triggers for proactive emissions inspections. </li>
+<li>Equity Task Force: Specifically address racial disparities highlighted by the positive correlation between the Black/African American population and high diagnosis rates. </li>
